@@ -1,9 +1,12 @@
 const express = require('express');
 const volleyball = require('volleyball');
 const app = express();
+const passport = require('passport');
+require('dotenv').config();
 const auth = require('./auth')
 
 app.use(volleyball);
+app.use(passport.initialize());
 app.get('/', (req,res) => {res.json({message:"Hello express" })});
 
 function notFound(req,res,next) {
