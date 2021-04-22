@@ -13,7 +13,6 @@ passport.use(new GithubStrategy({
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: "/auth/github/callback"
   }, async (accessToken, refreshToken, profile, cb) => {
-    console.log(profile);
     cb(null, profile);
     //User.findOrCreate({ googleId: profile.id }, function (err, user) {
       //return cb(err, user);
