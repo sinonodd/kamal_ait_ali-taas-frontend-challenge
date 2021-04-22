@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <h1>{{user.login}}</h1>
-    <img :src="user.avatar_url" alt="">
-    <ul>
-      <li>{{user.repos_url}}</li>
-    </ul>
-    <div v-for="repo in repos" :key="repo.id" class="container">
-      <h1>{{repo.full_name}}</h1>
+    <div class="d-flex align-items-center mx-4 my-4 justify-content-end">
+      <h1 class="mr-2 text-muted">{{user.login}}</h1>
+      <img :src="user.avatar_url" width="70px" class="rounded-circle"  alt="avatar">
+    </div>
+    <div v-for="repo in repos" :key="repo.id"
+      class="col-4">
+      <h4>{{repo.full_name}}</h4>
     </div>
   </div>
 </template>
