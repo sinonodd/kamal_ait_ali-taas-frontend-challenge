@@ -1,6 +1,13 @@
 const GithubStrategy = require('passport-github').Strategy;
 const passport = require('passport');
 
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+passport.deserializeUser((id, done) => {
+  done(err, id);
+});
+
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
