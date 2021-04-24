@@ -8,8 +8,9 @@
 * [x] Store token in localStorage
 * [x] Decode token and get the username
 * [x] Fetch username and Avatar(profile image)
-* [x] Fetch repos
+* [x] Fetch repos (Filterd by name)
 * [x] Fetch branches and Commits
+* [x] Search with Autocomplete 
 * [x] Logout button and clear LocalStorage
 * [x] Final design
 * [x] Update README.md
