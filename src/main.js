@@ -1,7 +1,7 @@
+import 'bootswatch/dist/lux/bootstrap.css';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import 'bootswatch/dist/lux/bootstrap.css';
 
 Vue.config.productionTip = false;
 

@@ -2,7 +2,7 @@
   <div class="container home">
     <div class="d-flex align-items-center mx-4 my-4 justify-content-start">
       <img :src="user.avatar_url" width="70px" class="rounded-circle"  alt="avatar">
-      <h1 class="mr-2 text-muted">{{user.login}}</h1>
+      <h1 class="ml-2 text-muted">{{user.login}}</h1>
     </div>
     <Repos :repos="repos"></Repos>
   </div>

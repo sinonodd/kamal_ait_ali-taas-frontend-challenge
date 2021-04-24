@@ -8,7 +8,7 @@
           aria-describedby="emailHelp" placeholder="Search">
       </div>
   </form>
-    <h1 class="text-left my-4">Repositories:</h1>
+    <h1 class="text-left text-muted my-4">Repositories:</h1>
     <div class="d-flex flex-wrap aligh-items-stretch shadow">
       <div v-for="repo in filterdRepos" :key="repo.name"
         class="repos d-flex align-items-stretch text-left">

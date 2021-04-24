@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" class="navbar bg-primary d-flex justify-content-center">
+      <router-link to="/" class="text-light text-center navbar-brand">NEXTHUB</router-link>
     </div>
     <router-view/>
   </div>
