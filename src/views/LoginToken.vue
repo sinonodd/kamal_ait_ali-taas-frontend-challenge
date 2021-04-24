@@ -1,8 +1,11 @@
 <template>
   <div class="container home">
-    <div class="d-flex align-items-center mx-4 my-4 justify-content-start">
-      <img :src="user.avatar_url" width="70px" class="rounded-circle"  alt="avatar">
-      <h1 class="ml-2 text-muted">{{user.login}}</h1>
+    <div class="d-flex align-items-center mx-4 my-4 justify-content-between">
+      <div class="d-flex align-items-center">
+        <img :src="user.avatar_url" width="70px" class="rounded-circle"  alt="avatar">
+        <h1 class="ml-2 text-muted">{{user.login}}</h1>
+      </div>
+      <button @click="logout()" class="btn btn-danger">Logout</button>
     </div>
     <Repos :repos="repos"></Repos>
   </div>
@@ -35,6 +38,12 @@ export default {
     const repos = await res2.json();
     this.repos = repos;
     console.log(repos);
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('token');
+      this.$router.push('/');
+    },
   },
 };
 </script>
